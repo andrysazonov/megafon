@@ -1,31 +1,33 @@
 <!DOCTYPE html>
-<html  lang="eng">
+<html lang="eng">
 
 <head>
     <meta charset=UTF-8">
-    <title>Title</title>
-    <style>
-
-    </style>
+    <title>Лента новостей</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
 </head>
 
 <body>
-<h1>Новости</h1>
-    <h2>wqe</h2>
-    <ul>
+    <header>
+        <h1>Новости</h1>
+    </header>
+    <section class="main">
+        <ul class="NewsList">
+            {%for i in test%}
+            <li class="NewsBlock">
+                <img src="{{i.link}}" alt="pict" />
+                <div class="NewsContent">
+                    <a href="{{i.text.link}}" style="text-decoration: none; color: white"><h1>{{i.text.title}}</h1></a>
+                    <p>{{i.text.description}}</p>
+                </div>
+            </li>
+            {%endfor%}
+        </ul>
+    </section>
+    <footer>
 
-        {%for i in test%}
-            <li><a href="">.</a>{{i.text.title}}</li>
-            <img src="{{i.link}}" alt="pict"/>
-
-        {%endfor%}
-    </ul>
-
-    <p>
-
-
-
-    </p>
+    </footer>
 </body>
 
 </html>
