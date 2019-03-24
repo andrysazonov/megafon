@@ -19,4 +19,5 @@ from django.urls import path, include
 urlpatterns = [
     path(r'', include('helloworld.urls')),
     path('admin/', admin.site.urls),
+    path('rss', include('rss.urls')),
 ]
