@@ -34,9 +34,11 @@ header {
      inset 0 0 1px rgba(140,150,170,.8),
      0 1px rgb(83,94,104),
      0 0 1px rgb(86,96,106); 
-    padding: 1%;
+    padding: 0.3% 1%;
     font-size: 20px;
     padding-bottom: 0.2%; 
+    display: flex;
+    justify-content: space-between;
 }
 
 .NewsBlock{
@@ -62,8 +64,8 @@ header {
      inset 0 0 1px rgba(140,150,170,.8),
      0 1px rgb(83,94,104),
      0 0 1px rgb(86,96,106);
-     display: flex; 
-     padding: 0.4%;
+    display: flex; 
+    padding: 0.4%;
 }
 
 img {
@@ -90,12 +92,10 @@ img {
      0 0 1px rgb(86,96,106);
 }
 
-.pageNumberButton {
-    position: fixed;
-    right: 5%;
-    bottom: 5%;
-    margin-top:2%;
-        text-align: center;
+.auth {
+    width: 10%;
+    margin-top: 2%;
+    text-align: center;
     font-family: arial,sans-serif;
     font-size: 15px;
     color: rgb(205,216,228);
@@ -103,16 +103,64 @@ img {
     text-decoration: none;
     user-select: none;
     line-height: 2em;
-    
+
     outline: none;
     border: 1px solid rgba(33,43,52,1);
     border-radius: 3px;
     background: rgb(80, 80, 80) linear-gradient(rgb(105, 105, 105), rgb(130,130,130));
     box-shadow:
-     inset 0 1px rgba(101,114,126,1),
-     inset 0 0 1px rgba(140,150,170,.8),
+    inset 0 1px rgba(101,114,126,1),
+    inset 0 0 1px rgba(140,150,170,.8),
+    0 1px rgb(83,94,104),
+    0 0 1px rgb(86,96,106);
+}
+
+.auth > a {
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+}
+
+.auth:active {
+    box-shadow:
+     inset 0 1px 3px rgba(0,10,20,.5),
      0 1px rgb(83,94,104),
      0 0 1px rgb(86,96,106);
+  }
+  .auth:focus:not(:active) {
+    border: 1px solid rgb(22,32,43);
+    border-bottom: 1px solid rgb(25,34,45);
+    background: rgb(53,61,71);
+    box-shadow:
+     inset 0 1px 3px rgba(0,10,20,.5),
+     0 1px rgb(83,94,104),
+     0 0 1px rgb(86,96,106);
+    pointer-events: none;
+  }
+
+.pageNumberButton {
+    position: fixed;
+    right: 5%;
+    bottom: 5%;
+    margin-top: 2%;
+    text-align: center;
+    font-family: arial,sans-serif;
+    font-size: 15px;
+    color: rgb(205,216,228);
+    text-shadow: 0 -1px rgb(46,53,58);
+    text-decoration: none;
+    user-select: none;
+    line-height: 2em;
+
+    outline: none;
+    border: 1px solid rgba(33,43,52,1);
+    border-radius: 3px;
+    background: rgb(80, 80, 80) linear-gradient(rgb(105, 105, 105), rgb(130,130,130));
+    box-shadow:
+    inset 0 1px rgba(101,114,126,1),
+    inset 0 0 1px rgba(140,150,170,.8),
+    0 1px rgb(83,94,104),
+    0 0 1px rgb(86,96,106);
   }
 
   .pageNumberButton > a {
