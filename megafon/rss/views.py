@@ -10,11 +10,10 @@ import feedparser
 
 
 def pull_feed(request):
-    d = feedparser.parse(r"https://lenta.ru/rss/top7")
+    d = feedparser.parse(r"https://lenta.ru/rss/news")
     e=[]
-    for i in range(10):
+    for i in range(100):
         e.append({'text':d.entries[i],'link':d.entries[i].links[1].href})
-        print(e)
     context = {
         "test": e,
         "feed": d.entries[0].links[1].href
